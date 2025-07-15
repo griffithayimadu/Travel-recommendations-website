@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+  <header>
+    <h1>Contact Us</h1>
+    <form id="contactForm">
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" required><br><br>
+      <label for="message">Message:</label><br>
+      <textarea id="message" rows="4" required></textarea><br><br>
+      <button type="submit">Send</button>
+    </form>
+    <p id="formResponse"></p>
+  </header>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('formResponse').innerText = "Thank you for contacting us!";
+    });
+  </script>
+</body>
+</html>
 
